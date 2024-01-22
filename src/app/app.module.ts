@@ -3,17 +3,17 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
-import { EtudiantRootComponent } from './pages/etudiant/containers/etudiant-root/etudiant-root.component';
+import { EtudiantRoutingModule } from './pages/etudiant/etudiant-routing.module';
+import { EtudiantModule } from './pages/etudiant/etudiant.module';
 @NgModule({
   declarations: [
     AppComponent,
-    EtudiantRootComponent
-    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    EtudiantRoutingModule,
+    EtudiantModule
   ],
   providers: [],
   bootstrap: [AppComponent]

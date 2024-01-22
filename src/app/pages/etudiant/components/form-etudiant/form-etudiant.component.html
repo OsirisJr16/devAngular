@@ -1,0 +1,47 @@
+<div class="modal-header"> 
+    <h4 class="modal-title">Nouveau Etudiant</h4>
+</div>
+<div class="modal-body"> 
+    <div class="container"> 
+        <form [formGroup]="formEtudiant"> 
+            <div class="mb-3">
+                <label class="form-label" for="nom">Nom</label>
+                <input  class="form-control" id="nom" formControlName="nom" type="text">
+                <div *ngIf="formEtudiant.get('nom')?.invalid && formEtudiant.get('nom')?.touched" class="text-danger">
+                   ce champ est requis
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="prenom">Prenom</label>
+                <input  class="form-control" id="prenom" formControlName="prenom" type="text">
+                <div *ngIf="formEtudiant.get('prenom')?.invalid && formEtudiant.get('prenom')?.touched" class="text-danger">
+                    ce champ est requis
+                </div>
+            </div>
+            <div class="mb-3"> 
+                <label class="form-label" for="dateNaiss">Date de naissance</label>
+                <input  class="form-control" id="dateNaiss" formControlName="dateNaiss" type="date">
+                <div *ngIf="formEtudiant.get('dateNaiss')?.invalid && formEtudiant.get('dateNaiss')?.touched" class="text-danger">
+                    ce champ est requis
+                </div>
+            </div>
+            <div class="mb-3"> 
+                <label class="form-label" for="classe">Classe</label>
+                <select class="form-select" id="classe" formControlName="classe">
+                    <option value="" disabled selected>Choix Classe</option>
+                    <option value="option1">L1</option>
+                    <option value="option2">L2</option>
+                    <option value="option3">L3</option>
+                    <option value="option4">M1</option>
+                    <option value="option5">M2</option>
+                </select>  
+                <div *ngIf="formEtudiant.get('classe')?.invalid && formEtudiant.get('classe')?.touched" class="text-danger">
+                    ce champ est requis
+                </div> 
+            </div>
+        </form>
+    </div> 
+    <div  class="modal-footer">
+        <button (click)="onSubmit()" type="button" class="btn btn-success" [disabled]="!formEtudiant.valid" >Enregistrer</button>
+    </div> 
+</div>
