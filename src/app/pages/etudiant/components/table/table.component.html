@@ -35,7 +35,16 @@
                                 </tr>
                               </thead>
                               <tbody>
-                                
+                                  <tr *ngFor="let etudiant of etudiants; index as i">
+                                    <th scope="row">{{ i + 1 }}</th>
+                                    <td>{{ etudiant.nom }}</td>
+                                    <td>{{ etudiant.prenom }}</td>
+                                    <td>{{ etudiant.dateNaiss }}</td>
+                                    <td>{{ etudiant.classe }}</td>
+                                    <td>
+                                        
+                                    </td>
+                                  </tr>
                               </tbody>
                           
                               <caption>

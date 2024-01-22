@@ -29,11 +29,11 @@
                 <label class="form-label" for="classe">Classe</label>
                 <select class="form-select" id="classe" formControlName="classe">
                     <option value="" disabled selected>Choix Classe</option>
-                    <option value="option1">L1</option>
-                    <option value="option2">L2</option>
-                    <option value="option3">L3</option>
-                    <option value="option4">M1</option>
-                    <option value="option5">M2</option>
+                    <option value="L1">L1</option>
+                    <option value="L2">L2</option>
+                    <option value="L3">L3</option>
+                    <option value="M1">M1</option>
+                    <option value="M2">M2</option>
                 </select>  
                 <div *ngIf="formEtudiant.get('classe')?.invalid && formEtudiant.get('classe')?.touched" class="text-danger">
                     ce champ est requis
