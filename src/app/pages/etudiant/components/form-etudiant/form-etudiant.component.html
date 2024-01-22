@@ -42,6 +42,6 @@
         </form>
     </div> 
     <div  class="modal-footer">
-        <button (click)="onSubmit()" type="button" class="btn btn-success" [disabled]="!formEtudiant.valid" >Enregistrer</button>
+        <button (click)="editMod ?modifyEtudiantInLocalStorage(studentData) : onSubmit() " type="button" class="btn btn-success" [disabled]="!formEtudiant.valid">Enregistrer</button>
     </div> 
 </div>
