@@ -13,6 +13,13 @@ export class TableComponent implements OnInit {
 
   newEtudiant(){
     const modalRef = this.ModalService.open(FormEtudiantComponent, {centered : true ,    scrollable : true});
+    modalRef.componentInstance.editMod = false ; 
+    modalRef.componentInstance.studentData = {} ; 
+  }
+  modifyEtudiant(student: any){
+    const modalRef = this.ModalService.open(FormEtudiantComponent , {centered : true , scrollable : true}) ; 
+    modalRef.componentInstance.editMod = true ; 
+    modalRef.componentInstance.studentData = {...student} ; 
   }
   ngOnInit(): void {
     console.log(this.etudiants)

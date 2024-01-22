@@ -10,6 +10,10 @@ import { FormBuilder, FormGroup, Validators ,AbstractControl} from '@angular/for
 export class FormEtudiantComponent implements OnInit{
     constructor(private formBuilder:FormBuilder,private modal : NgbActiveModal){}
     formEtudiant !: FormGroup ;
+    @Input() editMod:boolean =  false ; 
+    @Input() studentData : any = {} ;
+    modalTitle : string = "" ;
+
     onSubmit() {
       if (this.formEtudiant.valid) {
         const etudiant = this.formEtudiant.value;
@@ -23,6 +27,7 @@ export class FormEtudiantComponent implements OnInit{
       return Math.random().toString(36).substr(2, 9);
     }
     ngOnInit(): void {
+        this.modalTitle = this.editMod ? "Modifier les informations" : "Nouveau Etudiant" ;
         this.formEtudiant = this.formBuilder.group({
           nom : [null , [Validators.required]] , 
           prenom : [null , [Validators.required]] , 
