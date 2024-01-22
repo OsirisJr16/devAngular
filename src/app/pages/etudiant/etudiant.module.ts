@@ -6,6 +6,7 @@ import { EtudiantRootComponent } from './containers/etudiant-root/etudiant-root.
 import { FormEtudiantComponent } from './components/form-etudiant/form-etudiant.component';
 import { TableComponent } from './components/table/table.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     CommonModule,
     EtudiantRoutingModule,
     RouterModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgbDropdownModule
 
   ],
   exports : [
