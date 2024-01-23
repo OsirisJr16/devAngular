@@ -47,7 +47,7 @@ export class FormEtudiantComponent implements OnInit{
           nom : [null , [Validators.required]] , 
           prenom : [null , [Validators.required]] , 
           dateNaiss : [null , [Validators.required]] , 
-          classe : [null, [Validators.required]]
+          classe : [null, [Validators.required ]]
         })
     }
 } 

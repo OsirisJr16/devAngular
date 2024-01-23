@@ -7,12 +7,14 @@ import { FormEtudiantComponent } from './components/form-etudiant/form-etudiant.
 import { TableComponent } from './components/table/table.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
+import { ModalConfirmationComponent } from './components/modal-confirmation/modal-confirmation.component';
 
 @NgModule({
   declarations: [
     EtudiantRootComponent,
     FormEtudiantComponent,
-    TableComponent
+    TableComponent,
+    ModalConfirmationComponent
   ],
   imports: [
     CommonModule,
