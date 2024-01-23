@@ -22,8 +22,10 @@ export class TableComponent implements OnInit {
     modalRef.componentInstance.editMod = true ; 
     modalRef.componentInstance.studentData = {...student} ; 
   }
-  deleteStudent(){
+  deleteStudent(student : any){
     const modalRef = this.ModalService.open(ModalConfirmationComponent , {centered : true})
+    modalRef.componentInstance.studentData = {...student}
+
   }
   ngOnInit(): void {
     console.log(this.etudiants)
