@@ -1,6 +1,7 @@
 import { Component  ,OnInit} from '@angular/core';
 import { FormEtudiantComponent } from '../form-etudiant/form-etudiant.component';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { ModalConfirmationComponent } from '../modal-confirmation/modal-confirmation.component';
 
 @Component({
   selector: 'app-table',
@@ -20,6 +21,9 @@ export class TableComponent implements OnInit {
     const modalRef = this.ModalService.open(FormEtudiantComponent , {centered : true , scrollable : true}) ; 
     modalRef.componentInstance.editMod = true ; 
     modalRef.componentInstance.studentData = {...student} ; 
+  }
+  deleteStudent(){
+    const modalRef = this.ModalService.open(ModalConfirmationComponent , {centered : true})
   }
   ngOnInit(): void {
     console.log(this.etudiants)
